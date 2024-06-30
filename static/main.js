@@ -90,21 +90,29 @@ function ouRm(number) {
   ouCurrentRow = rows[0];
 }
 
+function isValidInteger(str) {
+  const parsedInt = parseInt(str, 10);
+  return !isNaN(parsedInt) && Number.isInteger(parsedInt);
+}
+
 var wage = document.getElementById("input");
 wage.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
-    inAdd(e.target.value);
-    wage.value = "";
-
-    const numberBoxes = document
-      .getElementById("table-container-in")
-      .querySelectorAll(".number-box");
-    numberBoxes.forEach((box) => {
-      box.addEventListener("dblclick", function () {
-        const value = box.textContent;
-        console.log("in2Clicked value:", value);
-        inMv(value);
+    if (isValidInteger(e.target.value)) {
+      inAdd(e.target.value);
+      const numberBoxes = document
+        .getElementById("table-container-in")
+        .querySelectorAll(".number-box");
+      numberBoxes.forEach((box) => {
+        box.addEventListener("dblclick", function () {
+          const value = box.textContent;
+          console.log("in2Clicked value:", value);
+          inMv(value);
+        });
       });
-    });
+    } else {
+      console.log("invalid integer:", e.target.value);
+    }
+    wage.value = "";
   }
 });
