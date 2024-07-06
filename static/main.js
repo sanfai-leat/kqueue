@@ -21,8 +21,8 @@ function inAdd(string) {
   const numberBox = document.createElement("div");
   numberBox.className = "number-box";
   numberBox.textContent = string;
-  numberBox.style.color = "darkred";
-  numberBox.style.border = "0.5vw solid darkred";
+  numberBox.style.color = "white";
+  numberBox.style.border = "0.5vw solid white";
   inCurrentRow.appendChild(numberBox);
 }
 
@@ -49,8 +49,8 @@ function ouAdd(string) {
   const numberBox = document.createElement("div");
   numberBox.className = "number-box";
   numberBox.textContent = string;
-  numberBox.style.color = "darkgreen";
-  numberBox.style.border = "0.5vw solid darkgreen";
+  numberBox.style.color = "#00ff00";
+  numberBox.style.border = "0.5vw solid #00ff00";
   ouCurrentRow.appendChild(numberBox);
 
   const numberBoxes = ouTable.querySelectorAll(".number-box");
