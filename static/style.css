@@ -69,9 +69,8 @@ body {
 }
 .number-box {
   display: inline-block;
-  font-size: 5vw;
+  font-size: 10vw;
   margin-right: 2.5vw;
-  border
 }
 .row {
   margin-bottom: 0.7vw;

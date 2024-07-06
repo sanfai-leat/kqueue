@@ -22,7 +22,7 @@ function inAdd(string) {
   numberBox.className = "number-box";
   numberBox.textContent = string;
   numberBox.style.color = "white";
-  numberBox.style.border = "0.5vw solid white";
+  numberBox.style.border = "0.3vw solid white";
   inCurrentRow.appendChild(numberBox);
 }
 
@@ -50,7 +50,7 @@ function ouAdd(string) {
   numberBox.className = "number-box";
   numberBox.textContent = string;
   numberBox.style.color = "#00ff00";
-  numberBox.style.border = "0.5vw solid #00ff00";
+  numberBox.style.border = "0.3vw solid #00ff00";
   ouCurrentRow.appendChild(numberBox);
 
   const numberBoxes = ouTable.querySelectorAll(".number-box");
