@@ -71,6 +71,8 @@ function inMv(number) {
     if (element.textContent == number) {
       element.remove();
       ouAdd(number);
+      bellSound.currentTime = 0;
+      bellSound.play();
     }
   });
   const rows = Array.from(container.querySelectorAll(".row"));
