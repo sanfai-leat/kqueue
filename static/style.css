@@ -20,23 +20,6 @@ body {
   position: absolute;
   top: 1.5vw;
 }
-.title.left {
-  left: 50%;
-  transform: translateX(-50%);
-}
-.title.right {
-  right: 50%;
-  transform: translateX(50%);
-}
-.divider {
-  position: absolute;
-  width: 3px;
-  height: 80%;
-  background-color: white;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 10%;
-}
 
 .footer {
   position: fixed;
@@ -59,19 +42,34 @@ body {
   font-size: 16px;
 }
 
-#table-container-in {
-  position: absolute;
-  top: 6vw;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #00ff00;
+    border: 0.3vw solid #00ff00;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #00ff00;
+    border: 0.3vw solid #00ff00;
+  }
+  100% {
+    transform: scale(1);
+    color: #00ff00;
+    border: 0.3vw solid #00ff00;
+  }
 }
+
 #table-container-out {
   position: absolute;
-  top: 6vw;
+  top: 1.5vw;
 }
 .number-box {
+  animation: pulse 1s infinite;
   display: inline-block;
-  font-size: 10vw;
-  margin-right: 2.5vw;
+  font-size: 7vw;
+  margin-right: 1.5vw;
 }
 .row {
-  margin-bottom: 0.7vw;
+  margin-bottom: 1.5vw;
 }
